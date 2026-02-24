@@ -9,12 +9,17 @@ int main() {
   //Para adequação ao que está no material do curso, é necessário usar fgets e alterar o código para digitar nomes de cidades.
 
   // Área para definição das variáveis para armazenar as propriedades das cidades
-  char estado1, estado2;
+  char estado1, estado2; 
   int numCidade1, numCidade2;
   int populacao1, populacao2;
   float area1, area2;
   float pib1, pib2;
   int pontoTur1, pontoTur2;
+
+  //inclusão do nível aventureiro
+  float densPop1, densPop2;
+  float pibCap1, pibCap2;
+
 
   // Área para entrada de dados
   printf("Carta 1: digite a letra do Estado (de A a H): ");
@@ -46,6 +51,12 @@ int main() {
   scanf("%d", &pontoTur2);
   // Área para exibição dos dados da cidade
 
+  //Área dos cálculos de densidade e PIB
+  densPop1 = populacao1 / area1;
+  densPop2 = populacao2 / area2;
+  pibCap1 = (float) pib1 * 1000000000 / populacao1;
+  pibCap2 = (float) pib2 * 1000000000 / populacao2;
+
   printf("\n");
 
   printf("Carta 1:\n");
@@ -55,6 +66,8 @@ int main() {
   printf("Área: %.2f km²\n", area1);
   printf("PIB: %.2f bilhões de reais\n", pib1);
   printf("Pontos turísticos: %d\n", pontoTur1);
+  printf("Densidade populacional: %.2f hab/km²\n", densPop1);
+  printf("PIB per Capita: %.2f reais\n", pibCap1);
 
   printf("\n");
 
@@ -65,7 +78,8 @@ int main() {
   printf("Área: %.2f km²\n", area2);
   printf("PIB: %.2f bilhões de reais\n", pib2);
   printf("Pontos turísticos: %d\n", pontoTur2);
-
+  printf("Densidade populacional: %.2f hab/km²\n", densPop2);
+  printf("PIB per Capita: %.2f reais\n", pibCap2);
   printf("\n");
 
 return 0;
