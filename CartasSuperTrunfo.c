@@ -46,6 +46,8 @@ int main() {
   scanf("%d", &pontoTur2);
   // Área para exibição dos dados da cidade
 
+  printf("\n");
+
   printf("Carta 1:\n");
   printf("Estado: %c\n", estado1);
   printf("Código: %c0%d\n", estado1, numCidade1);
